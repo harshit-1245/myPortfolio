@@ -6,6 +6,7 @@ import {AiFillWindows} from "react-icons/ai";
 import {GiNetworkBars} from "react-icons/gi"
 import {DiMongodb} from "react-icons/di";
 import {GrMysql} from "react-icons/gr"
+import { CiMobile3 } from "react-icons/ci";
 export const items=[{
     id:"1",
     icons:<FaHtml5/>,
@@ -78,5 +79,11 @@ export const items=[{
     skill:"MySql",
     percentage:"70%",
 },
+{
+    id:"9",
+    icons:<CiMobile3/>,
+    skill:"React-Native",
+    percentage:"65%",
+}
 
 ]
