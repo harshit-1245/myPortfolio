@@ -1,31 +1,41 @@
 /* Styles for the admin panel */
 .admin-panel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  /* Styles for each user section */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Styles for each user section */
+.admin-section {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  width: 70%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for user details */
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styles for each detail (name, email, message) */
+.user-details span {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Media query for mobile */
+@media screen and (max-width: 760px) {
   .admin-section {
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 15px;
-    width: 70%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Adjust width for smaller screens */
   }
   
-  /* Styles for user details */
-  .user-details {
-    display: flex;
-    flex-direction: column;
+  .admin-panel {
+    padding: 10px; /* Decrease padding for smaller screens */
   }
-  
-  /* Styles for each detail (name, email, message) */
-  .user-details span {
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: #333;
-  }
-  
+}
