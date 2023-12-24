@@ -1,0 +1,134 @@
+.hero {
+  padding: 40px 0;
+  position: relative;
+  background: linear-gradient(#f0f250);
+  background-size: 400% 100%;
+
+  }
+
+
+  
+  
+  
+  
+  
+  
+  
+  .container {
+    display: flex;
+    flex-direction: column-reverse; /* On mobile, reverse the order to place the image first */
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .left-column {
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 36px;
+    color: black;
+    margin-bottom: 20px;
+  }
+  
+  span {
+    color: white;
+  }
+  
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  .typewriter{
+    color: purple;
+  }
+  
+  .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  button {
+    background-color: #212121;
+    padding: 10px 20px;
+    margin: 0 10px 10px 0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #111;
+  }
+  
+  .right-column {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .goku {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    
+  }
+  
+  
+  /* Media query for mobile screens */
+  /* Media query for mobile screens */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column-reverse; /* Revert to default direction on mobile */
+      align-items: center; /* Revert to default alignment on mobile */
+    }
+  
+    .left-column {
+      order: -1; /* Place the text section before the image on mobile */
+      margin-top: 0; /* Remove the top margin on mobile */
+    }
+    p {
+      font-size: 16px;
+      line-height: 20px;
+      color: #333;
+      font-family: 'Arial', sans-serif;
+      background-color: #f7f7f7;
+      padding: 10px;
+      border-radius: 5px;
+      margin: 10px;
+      text-align: center;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      /* Add animation properties */
+      animation: fadeIn 1s ease-in;
+    }
+    h1 {
+      font-size: 40px; /* Adjust the font size as needed */
+    }
+  }
+  
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes colorWave {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 400% 0;
+    }
+  }

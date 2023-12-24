@@ -1,0 +1,17 @@
+.parent-container {
+    margin-top: 20%; /* Adjusted margin for better proportion */
+    width: 60vw;
+    max-width: 800px; /* Added max-width for larger screens */
+    height: auto;
+    padding: 2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #eff3f2;
+    box-sizing: border-box; /* Added box-sizing for more predictable sizing */
+
+    @media (max-width: 720px) {
+        width: 90vw;
+        margin-top: 15%; /* Adjusted margin for better proportion on smaller screens */
+    }
+}

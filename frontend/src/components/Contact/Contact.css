@@ -1,0 +1,79 @@
+/* General Styles */
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Set a pleasant background color */
+  }
+  
+  .contact-container {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center; /* Center align the content */
+    background-color: #fff; /* Set container background color */
+    padding: 20px; /* Add some padding */
+    border-radius: 8px; /* Add border-radius for a softer look */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box-shadow */
+  }
+  
+ .contact {
+    margin-top: 0;
+    color: black; /* Set heading color */
+  }
+  
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    text-align: left; /* Align labels to the left */
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: black; /* Set label color */
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    form {
+        max-width: 100%;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: calc(100% - 16px);
+    }
+}

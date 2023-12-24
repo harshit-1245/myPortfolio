@@ -1,0 +1,27 @@
+.skill-section {
+    width: 100vw;
+    height: 115vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-section .heading {
+    margin-bottom: 5rem;
+    color: #0b70cf;
+    border-bottom: 1px solid #000;
+}
+
+@media (max-width: 768px) {
+    .skill-section {
+        width: 90vw;
+        margin-top: 6%;
+         /* Adjusted height to fit content */
+        padding: 5%;
+    }
+
+    .skill-section .heading {
+        margin-bottom: 3rem; /* Reduced margin for smaller screens */
+    }
+}
