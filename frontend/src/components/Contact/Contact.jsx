@@ -52,7 +52,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${baseUrl}/contact/user`, {
+      const response = await axios.post(`https://portfolio-backend-og7d.onrender.com/contact/user`, {
         name: user.name,
         email: user.email,
         message: user.message,
