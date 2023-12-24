@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './Admin.css'
 import axios from 'axios';
+const baseUrl ="https://portfolio-backend-og7d.onrender.com"
 
 const Admin = () => {
-  const baseUrl ="https://portfolio-backend-og7d.onrender.com"
+  
   const [users, setUsers] = useState([]);
 
   const getApi = async () => {

@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./FormDesign.css";
 import axios from "axios";
+const baseUrl ="https://portfolio-backend-og7d.onrender.com"
 
 const Register = ({ setIsLogged }) => {
-  const baseUrl ="https://portfolio-backend-og7d.onrender.com"
+
   const navigate = useNavigate();
   const [message, setMessage] = useState("");
   const [user, setUser] = useState({

@@ -2,9 +2,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 
 import './Contact.css';
+const baseUrl ="https://portfolio-backend-og7d.onrender.com"
 
 const Contact = () => {
-  const baseUrl ="https://portfolio-backend-og7d.onrender.com"
+ 
   const form=useRef();
   const [message,setMessage]=useState('');
   const [user, setUser] = useState({
