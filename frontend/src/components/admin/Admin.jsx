@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Admin.css'
 import axios from 'axios';
-const baseUrl ="https://portfolio-backend-og7d.onrender.com"
+
 
 const Admin = () => {
   
@@ -9,7 +9,7 @@ const Admin = () => {
 
   const getApi = async () => {
     try {
-      const response = await axios.get(`${baseUrl}/contact`);
+      const response = await axios.get(`https://portfolio-backend-og7d.onrender.com/contact`);
       setUsers(response.data);
     } catch (error) {
       console.error(error);

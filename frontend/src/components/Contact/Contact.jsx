@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 
 import './Contact.css';
-const baseUrl ="https://portfolio-backend-og7d.onrender.com"
+
 
 const Contact = () => {
  
@@ -16,7 +16,7 @@ const Contact = () => {
 
   const getApi=async()=>{
     try {
-      const response = await axios.get(`${baseUrl}/contact`);
+      const response = await axios.get(`https://portfolio-backend-og7d.onrender.com/contact`);
       console.log(response.data); // Assuming the response contains data you want to log
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -35,7 +35,7 @@ const Contact = () => {
   };
   const sendEmail = async () => {
     try {
-      const response = await axios.post(`${baseUrl}/contact/sendEmail`, {
+      const response = await axios.post(`https://portfolio-backend-og7d.onrender.com/contact/sendEmail`, {
         name: user.name,
         email: user.email,
         message: user.message,
