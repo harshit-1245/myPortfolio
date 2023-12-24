@@ -4,6 +4,7 @@ import axios from 'axios';
 import './Contact.css';
 
 const Contact = () => {
+  const baseUrl ="https://portfolio-backend-og7d.onrender.com"
   const form=useRef();
   const [message,setMessage]=useState('');
   const [user, setUser] = useState({
@@ -14,7 +15,7 @@ const Contact = () => {
 
   const getApi=async()=>{
     try {
-      const response = await axios.get('http://localhost:5000/contact');
+      const response = await axios.get(`${baseUrl}/contact`);
       console.log(response.data); // Assuming the response contains data you want to log
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -33,7 +34,7 @@ const Contact = () => {
   };
   const sendEmail = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/contact/sendEmail', {
+      const response = await axios.post(`${baseUrl}/contact/sendEmail`, {
         name: user.name,
         email: user.email,
         message: user.message,
@@ -50,7 +51,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/contact/user', {
+      const response = await axios.post(`${baseUrl}/contact/user`, {
         name: user.name,
         email: user.email,
         message: user.message,

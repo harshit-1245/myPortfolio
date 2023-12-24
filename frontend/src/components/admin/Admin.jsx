@@ -3,11 +3,12 @@ import './Admin.css'
 import axios from 'axios';
 
 const Admin = () => {
+  const baseUrl ="https://portfolio-backend-og7d.onrender.com"
   const [users, setUsers] = useState([]);
 
   const getApi = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/contact');
+      const response = await axios.get(`${baseUrl}/contact`);
       setUsers(response.data);
     } catch (error) {
       console.error(error);

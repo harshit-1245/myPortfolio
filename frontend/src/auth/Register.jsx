@@ -4,6 +4,7 @@ import "./FormDesign.css";
 import axios from "axios";
 
 const Register = ({ setIsLogged }) => {
+  const baseUrl ="https://portfolio-backend-og7d.onrender.com"
   const navigate = useNavigate();
   const [message, setMessage] = useState("");
   const [user, setUser] = useState({
@@ -32,7 +33,7 @@ const Register = ({ setIsLogged }) => {
     }
 
     try {
-      const response = await axios.post("http://localhost:3030/user/register", {
+      const response = await axios.post(`${baseUrl}/user/register`, {
         firstname: user.firstName,
         lastname: user.lastName,
         email: user.email,
