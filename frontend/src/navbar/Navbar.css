@@ -1,71 +1,89 @@
+/* Header styles for Desktop */
 .header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px 0;
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333; /* Set your desired background color */
+  color: white; /* Set text color */
+  padding: 20px 40px; /* Adjust padding as needed */
 }
 
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%; /* Adjust width of the header content */
+  
 }
 
-.header .left a {
+.left a {
   text-decoration: none;
-  color: #fff !important;
-  transition: color 0.3s ease;
+  font-size: 24px; /* Set your desired font size */
+  color: white; /* Set link color */
+  font-weight: bold; /* Optionally set font weight */
 }
 
-.header .left a:hover {
-  color: #ff5722;
+.left a:hover {
+  color: lightgrey; /* Change link color on hover */
 }
 
-.header .right ul {
-  list-style: none;
-  padding: 0;
+.right {
   display: flex;
+  justify-content: flex-end; /* Adjusted to align content to the right */
+  align-items: center; /* Align items vertically */
+  flex: 1; /* Fill remaining space */
 }
-.links{
-  color: white;
+.right ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+
+.right ul li {
+  margin-left: 20px; /* Adjust spacing between list items */
+}
+
+.right ul li a {
   text-decoration: none;
-}
-.header .right li {
-  margin-right: 20px;
-}
+  color: white; /* Set link color */
+  transition: color 0.3s; /* Add smooth color transition */
+  padding: 20px;
+  position: relative;
 
-.header .right li .home {
-  text-decoration: none;
-  color: #333 !important;
-  transition: color 0.3s ease;
 }
-
-.header .right li .home:hover {
-  color: #800080;
-}
-.login-section {
-   /* This centers the content vertically within the container */
-  width: 50px; /* Adjust the width to your desired size */
-  height: 50px; /* Adjust the height to your desired size */
-  border-radius: 50%; /* Makes it a circular shape */
-  overflow: hidden; /* Hides any content that may overflow the circle */
-}
-
-.login-section img {
+.right ul li a::before {
+  content: "";
   position: absolute;
-  width: 50px;
- right: 0; /* Move .hamburger to the left side */
-  top: 20px;
- display: flex;
-   justify-content: center;
-   align-items: center;
-   cursor: pointer;
-   right: 12px;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
 }
 
+.right ul li a:hover::before {
+  background-color: lightgrey; /* Change color to create the underline effect */
+  animation: underlineAnimation 0.3s forwards;
+}
 
+@keyframes underlineAnimation {
+  0% {
+    width: 0;
+    left: 50%;
+  }
+  100% {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.right ul li a:hover {
+  transform: scale(1.1); /* Increase size on hover */
+  transition: transform 0.3s ease;
+}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -151,72 +169,3 @@
     display: flex;
   }
 }   
-nav{
-  position: relative;
-  
-  width: 590px;
-  height: 50px;
-  background: #34495e;
-  border-radius: 8px;
-  font-size: 0;
-  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
-}
-nav .links{
-   font-size: 15px;
-   text-transform: uppercase;
-   color: white;
-   text-decoration: none;
-   line-height: 50px;
-   position: relative;
-   z-index: 1;
-   display: inline-block;
-   text-align: center;
-}
-nav .animation{
-  position: absolute;
-  height: 5px;
-  bottom: 0;
-  z-index: 0;
-  background: #1abc9c;
-  width: 100px;
-  border-radius: 8px;
- transition: all .5s ease 0s;
-}
-
-
-
-li:nth-child(1){
-width: 100px;
-}
-nav .start-home,li:nth-child(1):hover~.animation{
-  width: 100px;
-  left: 0;
-}
-li:nth-child(2){
-  width: 110px;
-}
-nav .start-about,li:nth-child(2):hover~.animation{
-  width: 110px;
-  left: 100px;
-}
-li:nth-child(3){
-  width: 100px;
-}
-nav .start-skills,li:nth-child(3):hover~.animation{
-  width: 100px;
-  left:210px;
-}
-li:nth-child(4){
-  width: 160px;
-}
-nav .start-experience,li:nth-child(4):hover~.animation{
-  width: 160px;
-  left: 310px;
-}
-li:nth-child(5){
-  width: 120px;
-}
-nav .start-contact,li:nth-child(5):hover~.animation{
-  width: 120px;
-  left: 470px;
-}

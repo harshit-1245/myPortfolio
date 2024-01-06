@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Player } from '@lottiefiles/react-lottie-player';
+// import { Player } from '@lottiefiles/react-lottie-player';
 import './Home.css';
-import dog from '../../image/dog.json';
+import hello from '../../image/hello.png';
 import { Typewriter } from 'react-simple-typewriter';
 import { useNavigate } from 'react-router-dom';
-import cvFile from "../../image/resume.jpg"
+import cvFile from "../../image/Resume2.pdf"
 
 const Home = () => {
   const [isCoder, setIsCoder] = useState(true);
@@ -23,7 +23,7 @@ const Home = () => {
       <div className="container">
         <div className="left-column">
           <h1 className="main-heading">
-            Welcome to My Portfolio
+            I'm
             {' '}
             <span className='typewriter'>
               <Typewriter
@@ -47,13 +47,15 @@ const Home = () => {
           </div>
         </div>
         <div className="right-column">
-          <Player
+
+          <img src={hello} alt="" />
+          {/* <Player
             autoplay
             speed={1}
             loop
             src={dog}
             style={{ height: "300px", width: "300px" }}
-          />
+          /> */}
         </div>
       </div>
     </div>

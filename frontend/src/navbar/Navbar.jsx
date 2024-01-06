@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink,useNavigate } from 'react-router-dom';
+import {Link,useNavigate } from 'react-router-dom';
 import './Navbar.css';
 import {GiHamburgerMenu} from 'react-icons/gi'
 import {AiOutlineClose} from 'react-icons/ai'
@@ -11,10 +11,7 @@ const Navbar = () => {
   const [open,setOpen]=useState(false)
   const navigate=useNavigate()
 
-  const handleAnimation = (e) => {
-    const offset = e.target.offsetLeft;
-    setAnimationStyle({ width: `${e.target.offsetWidth}px`, left: `${offset}px` });
-  };
+
  
 
   return (
@@ -28,58 +25,33 @@ const Navbar = () => {
           <nav>
             <ul>
               <li>
-                <NavLink
-                  className="links"
-                  to="/"
-                  onClick={(e) => handleAnimation(e)}
-                >
-                  Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className="links"
-                  to="/about"
-                  onClick={(e) => handleAnimation(e)}
-                >
-                  About
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className="links"
-                  to="/skills"
-                  onClick={(e) => handleAnimation(e)}
-                >
-                  Skills
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className="links"
-                  to="/project"
-                  onClick={(e) => handleAnimation(e)}
-                >
-                  project
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className="links"
-                  to="/contact"
-                  onClick={(e) => handleAnimation(e)}
-                >
-                  Contact
-                </NavLink>
+               <Link to="/">
+               Home
+               </Link>
                 </li>
-               <li> <NavLink className="links" to='/admin'
-                onClick={(e)=>handleAnimation(e)}>
-                  Admin
-                </NavLink>
+                <li>
+               <Link to="/about">
+              About Me
+               </Link>
+                </li>
+                <li>
+               <Link to="/skills">
+              Skill
+               </Link>
+                </li>
+                <li>
+               <Link to="/project">
+              Project
+               </Link>
+                </li>
+                <li>
+               <Link to="/contact">
+              Contact
+               </Link>
                 </li>
               
             </ul>
-            <div className="animation" style={animationStyle}></div>
+            
           </nav>
         </div>
         <div className="hamburger">

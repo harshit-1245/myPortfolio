@@ -14,17 +14,7 @@ const Contact = () => {
     message: '',
   });
 
-  const getApi=async()=>{
-    try {
-      const response = await axios.get(`https://portfolio-backend-og7d.onrender.com/contact`);
-      console.log(response.data); // Assuming the response contains data you want to log
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    }
-  }
-  useEffect(()=>{
-    getApi()
-  })
+  
 
   const handleChange = (e) => {
     const {name,value}=e.target;
@@ -35,7 +25,7 @@ const Contact = () => {
   };
   const sendEmail = async () => {
     try {
-      const response = await axios.post(`https://portfolio-backend-og7d.onrender.com/contact/sendEmail`, {
+      const response = await axios.post(`https://portfolio-backend2-zhzf.onrender.com/contact/sendEmail`, {
         name: user.name,
         email: user.email,
         message: user.message,
@@ -52,7 +42,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`https://portfolio-backend-og7d.onrender.com/contact/user`, {
+      const response = await axios.post(`https://portfolio-backend2-zhzf.onrender.com/contact/user`, {
         name: user.name,
         email: user.email,
         message: user.message,

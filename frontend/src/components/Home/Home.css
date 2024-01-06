@@ -71,9 +71,16 @@
   }
   
   .right-column {
-    margin-top: 20px;
+   
+    margin-top: 10px;
     text-align: center;
   }
+ .right-column img{
+  width:30%;
+  height:30%;
+  
+ }
+
   
   .goku {
     width: 100%;
@@ -85,34 +92,53 @@
   
   /* Media query for mobile screens */
   /* Media query for mobile screens */
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column-reverse; /* Revert to default direction on mobile */
-      align-items: center; /* Revert to default alignment on mobile */
-    }
-  
-    .left-column {
-      order: -1; /* Place the text section before the image on mobile */
-      margin-top: 0; /* Remove the top margin on mobile */
-    }
-    p {
-      font-size: 16px;
-      line-height: 20px;
-      color: #333;
-      font-family: 'Arial', sans-serif;
-      background-color: #f7f7f7;
-      padding: 10px;
-      border-radius: 5px;
-      margin: 10px;
-      text-align: center;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-      /* Add animation properties */
-      animation: fadeIn 1s ease-in;
-    }
-    h1 {
-      font-size: 40px; /* Adjust the font size as needed */
-    }
+  /* Media query for mobile screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse; /* Revert to default direction on mobile */
+    align-items: center; /* Revert to default alignment on mobile */
   }
+
+  .left-column {
+    order: -1; /* Place the text section before the image on mobile */
+    margin-top: 0; /* Remove the top margin on mobile */
+  }
+  
+  .right-column {
+    text-align: center;
+    margin-top: 20px; /* Adjust margin for spacing */
+  }
+
+  .right-column img {
+    width: 80%; /* Adjust image width for mobile */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 300px; /* Set a max-width to ensure responsiveness */
+    display: block; /* Ensure the image is centered */
+    margin: 0 auto; /* Center the image horizontally */
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 20px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    /* Add animation properties */
+    animation: fadeIn 1s ease-in;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 40px; /* Adjust the font size as needed */
+  }
+}
+
   
 
   @keyframes fadeIn {
